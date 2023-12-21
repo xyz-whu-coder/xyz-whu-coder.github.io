@@ -4,22 +4,22 @@
   <meta charset="utf-8">
   
   
-  <title>First Blog | Hexo</title>
+  <title>First Blog | XYZ BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="First BlogThis is xyz’s first blog. Welcome!">
+  <meta name="description" content="This is xyz&#39;s first blog.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="First Blog">
 <meta property="og:url" content="http://example.com/2023/12/21/First%20Blog/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="First BlogThis is xyz’s first blog. Welcome!">
+<meta property="og:site_name" content="XYZ BLOG">
+<meta property="og:description" content="This is xyz&#39;s first blog.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-12-21T04:17:38.000Z">
-<meta property="article:modified_time" content="2023-12-21T06:50:51.801Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2023-12-21T09:20:22.602Z">
+<meta property="article:author" content="Eric Xiao">
 <meta property="article:tag" content="Test">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="XYZ BLOG" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -44,7 +44,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">XYZ BLOG</a>
       </h1>
       
     </div>
@@ -94,13 +94,141 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="First-Blog"><a href="#First-Blog" class="headerlink" title="First Blog"></a>First Blog</h1><p>This is xyz’s first blog.</p>
-<p>Welcome!</p>
+        <p>This is xyz's first blog.</p>
+<span id="more"></span>
+<p>Welcome to Hexo!</p>
+<p>Test Formula: ### Question</p>
+<p>设 <span class="math inline">\(C_1\)</span> 和 <span
+class="math inline">\(C_2\)</span> 为服从正态分布的两个训练集合，<span
+class="math inline">\(x\)</span> 为一个待测样本，则根据贝叶斯公式有
+<span class="math inline">\(P(C_1|x) = \frac{P(x \mid C_1)P(C_1)}{P(x
+\mid C_1)P(C_1) + P(x \mid C_2)P(C_2)}\)</span> ，</p>
+<p>若设 <span class="math inline">\(z = \mathrm{ln}\frac{p(x \mid
+C_1)P(C_1)}{p(x \mid C_2)P(C_2)}\)</span> ，</p>
+<p>证明：<span class="math inline">\(z\)</span> 是一个线性超平面，并且
+<span class="math inline">\(P(C_1|x) =
+\mathop{\sigma(z)}\limits_{\mathrm{Sigmoid \above{}
+function}}\)</span></p>
+<h3 id="answer">Answer</h3>
+<p><strong>证明：</strong></p>
+<p>由贝叶斯公式，</p>
+<p><span class="math display">\[
+P(C_1|x) = \frac{P(x \mid C_1)P(C_1)}{P(x \mid C_1)P(C_1) + P(x \mid
+C_2)P(C_2)} \\
+P(C_1|x) = \frac{1}{1 + \frac{P(x \mid C_2)P(C_2)}{P(x \mid C_1)P(C_1)}}
+\]</span></p>
+<p>而 <span class="math inline">\(z = \mathrm{ln}\frac{p(x \mid
+C_1)P(C_1)}{p(x \mid C_2)P(C_2)}\)</span>，代入以上得</p>
+<p><span class="math display">\[
+P(C_1|x) = \frac{1}{1 + e^{-z}} =
+\mathop{\sigma(z)}\limits_{\mathrm{Sigmoid \above{} function}}
+\]</span></p>
+<p>即证得 <span class="math inline">\(P(C_1|x) =
+\mathop{\sigma(z)}\limits_{\mathrm{Sigmoid \above{}
+function}}\)</span></p>
+<p>下面证明 <span class="math inline">\(z\)</span>
+是一个线性超平面。</p>
+<p>对 <span class="math inline">\(z\)</span> 变换得：</p>
+<p><span class="math display">\[
+z = \mathrm{ln}\frac{P(x \mid C_1)}{P(x \mid C_2)} +
+\mathrm{ln}\frac{P(C_1)}{P(C_2)} \tag{1}
+\]</span></p>
+<p>设 <span class="math inline">\(C_1\)</span> 在训练集中出现次数为
+<span class="math inline">\(N_1\)</span>，<span
+class="math inline">\(C_2\)</span> 在训练集中出现次数为 <span
+class="math inline">\(N_2\)</span>，则</p>
+<p><span class="math display">\[
+\mathrm{ln}\frac{P(C_1)}{P(C_2)} = \mathrm{ln}\frac{\frac{N_1}{N_1 +
+N_2}}{\frac{N_2}{N_1 + N_2}} = \mathrm{ln}\frac{N_1}{N_2}
+\]</span></p>
+<p>其中 <span class="math inline">\(P(x \mid C_1)\)</span>，<span
+class="math inline">\(P(x \mid C_2)\)</span> 遵从正态分布，即</p>
+<p><span class="math display">\[
+P(x \mid C_1) =
+\frac{1}{2\pi^{\frac{D}{2}}}\frac{1}{|\Sigma_1|^{\frac{1}{2}}}e^{-\frac{1}{2}(x
+- \mu_1)^\top \Sigma_1^{-1}(x - \mu_1)} \\ \  \\
+P(x \mid C_2) =
+\frac{1}{2\pi^{\frac{D}{2}}}\frac{1}{|\Sigma_2|^{\frac{1}{2}}}e^{-\frac{1}{2}(x
+- \mu_2)^\top \Sigma_2^{-1}(x - \mu_2)}
+\]</span></p>
+<p>代入 <span class="math inline">\((1)\)</span> 式中第一项，</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\mathrm{ln}\frac{P(x \mid C_1)}{P(x \mid C_2)}\\ \ \\
+&amp;=
+\mathrm{ln}
+\frac{
+\frac{1}{2\pi^{\frac{D}{2}}}
+\frac{1}{|\Sigma_1|^{\frac{1}{2}}}
+e^{-\frac{1}{2}(x - \mu_1)^\top \Sigma_1^{-1}(x - \mu_1)}
+}
+{
+\frac{1}{2\pi^{\frac{D}{2}}}
+\frac{1}{|\Sigma_2|^{\frac{1}{2}}}
+e^{-\frac{1}{2}(x - \mu_2)^\top \Sigma_2^{-1}(x - \mu_2)}
+} \\ \ \\
+&amp;= \mathrm{ln}\frac{
+\frac{1}{|\Sigma_1|^{\frac{1}{2}}}e^{-\frac{1}{2}(x - \mu_1)^\top
+\Sigma_1^{-1}(x -
+\mu_1)}}{\frac{1}{|\Sigma_2|^{\frac{1}{2}}}e^{-\frac{1}{2}(x -
+\mu_2)^\top \Sigma_2^{-1}(x - \mu_2)}} \\ \ \\
+&amp;= \mathrm{ln}\frac{
+\frac{1}{|\Sigma_1|^{\frac{1}{2}}}}{\frac{1}{|\Sigma_2|^{\frac{1}{2}}}}e^{-\frac{1}{2}[(x
+- \mu_1)^\top \Sigma_1^{-1}(x - \mu_1) - (x - \mu_2)^\top
+\Sigma_2^{-1}(x - \mu_2)]} \\ \ \\
+&amp;= \mathrm{ln}\frac{
+\frac{1}{|\Sigma_1|^{\frac{1}{2}}}}{\frac{1}{|\Sigma_2|^{\frac{1}{2}}}}
+- \frac{1}{2}[(x - \mu_1)^\top \Sigma_1^{-1}(x - \mu_1) - (x -
+\mu_2)^\top \Sigma_2^{-1}(x - \mu_2)]
+\end{aligned}
+\]</span></p>
+<p>对 <span class="math inline">\((x - \mu_1)^\top \Sigma_1^{-1}(x -
+\mu_1)\)</span> 化简：</p>
+<p><span class="math display">\[
+(x - \mu_1)^\top \Sigma_1^{-1}(x - \mu_1) = x^\top \Sigma_1^{-1}x -
+2\mu_1\Sigma_1^{-1}x + \mu_1^\top \Sigma_1^{-1}\mu_1
+\]</span></p>
+<p>同理得</p>
+<p><span class="math display">\[
+(x - \mu_2)^\top \Sigma_2^{-1}(x - \mu_2) = x^\top \Sigma_2^{-1}x -
+2\mu_2\Sigma_2^{-1}x + \mu_2^\top \Sigma_2^{-1}\mu_2
+\]</span></p>
+<p>代入 <span class="math inline">\(z\)</span>，得</p>
+<p><span class="math display">\[
+z =
+\mathrm{ln}\frac{|\Sigma_2|^{\frac{1}{2}}}{|\Sigma_1|^{\frac{1}{2}}{}} -
+\frac{1}{2}[x^\top \Sigma_1^{-1}\mu_1 - 2\mu_1\Sigma_1^{-1}x +
+\mu_1^\top \Sigma_1^{-1}\mu_1 - x^\top \Sigma_2^{-1}x +
+2\mu_2\Sigma_2^{-1}x - \mu_2^\top \Sigma_2^{-1}\mu_2] +
+\mathrm{ln}\frac{N_1}{N_2}
+\]</span></p>
+<p>由于如果每个类的协方差 <span class="math inline">\(\Sigma\)</span>
+不同，会使方差过大，参数过多。则可认为 <span
+class="math inline">\(\Sigma_1 = \Sigma_2 = \Sigma\)</span>.</p>
+<p>于是化简 <span class="math inline">\(z\)</span> 为：</p>
+<p><span class="math display">\[
+z = (\mu_1 - \mu_2)\Sigma^{-1}x - \frac{1}{2}\mu_1^\top \Sigma^{-1}\mu_1
++ \frac{1}{2}\mu_2^\top \Sigma^{-1}\mu_2 + \mathrm{ln}\frac{N_1}{N_2}
+\]</span></p>
+<p>观察，令 $(_1 - _2)^{-1} = ^$， <span
+class="math inline">\(-\frac{1}{2}\mu_1^\top \Sigma^{-1}\mu_1 +
+\frac{1}{2}\mu_2^\top \Sigma^{-1}\mu_2 + \mathrm{ln}\frac{N_1}{N_2} =
+b\)</span></p>
+<p>则</p>
+<p><span class="math display">\[
+z = \omega^\top x + b
+\]</span></p>
+<p>所以证得：<span class="math inline">\(z\)</span>
+是一个线性超平面。</p>
+<p>综上，证得：<span class="math inline">\(z\)</span>
+是一个线性超平面，并且 <span class="math inline">\(P(C_1|x) =
+\mathop{\sigma(z)}\limits_{\mathrm{Sigmoid \above{}
+function}}\)</span></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/21/First%20Blog/" data-id="clqeugd9b0000va2s50y39esr" data-title="First Blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/12/21/First%20Blog/" data-id="clqf0165t0000452sg6eq8m3u" data-title="First Blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -111,6 +239,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2023/12/21/Some-Notes-About-Hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Some Notes About Hexo
+        
+      </div>
+    </a>
   
   
     <a href="/2023/12/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -167,6 +304,10 @@
       <ul>
         
           <li>
+            <a href="/2023/12/21/Some-Notes-About-Hexo/">Some Notes About Hexo</a>
+          </li>
+        
+          <li>
             <a href="/2023/12/21/First%20Blog/">First Blog</a>
           </li>
         
@@ -187,7 +328,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2023 John Doe<br>
+      &copy; 2023 Eric Xiao<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
