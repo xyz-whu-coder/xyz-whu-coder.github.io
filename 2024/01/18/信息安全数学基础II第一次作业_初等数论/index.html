@@ -29,7 +29,7 @@
 <meta property="og:description" content="第1、2、3、4、5章">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-18T15:53:45.000Z">
-<meta property="article:modified_time" content="2024-01-18T17:26:55.536Z">
+<meta property="article:modified_time" content="2024-02-03T12:45:34.901Z">
 <meta property="article:author" content="xyz">
 <meta property="article:tag" content="Source">
 <meta name="twitter:card" content="summary">
@@ -230,7 +230,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 01/19/2024 01:26:55" itemprop="dateModified" datetime="2024-01-19T01:26:55+08:00">01/19/2024</time>
+      <time title="Modified: 02/03/2024 20:45:34" itemprop="dateModified" datetime="2024-02-03T20:45:34+08:00">02/03/2024</time>
     </span>
 
   
@@ -247,14 +247,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>3.6k</span>
+      <span>18k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>6 mins.</span>
+      <span>32 mins.</span>
     </span>
 </div>
 
@@ -339,6 +339,19 @@ class="math inline">\(p\)</span>.</p></li>
 <p>求以下整数对的最大公因数：</p>
 <p>④ <span class="math inline">\((20785, 44350)\)</span>.</p>
 <h4 id="answer-3">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+44350 &amp;= 2 \times 20785 + 2780
+20785 &amp;= 7 \times 2780 + 1325
+2780 &amp;= 2 \times 1325 + 130
+1325 &amp;= 10 \times 130 + 25
+130 &amp;= 5 \times 25 + 5
+25 &amp;= 5 \times 5
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\therefore\)</span> 最大公因数是 <span
+class="math inline">\(5\)</span>.</p>
 <h3 id="section-4">(32)</h3>
 <h4 id="question-4">Question</h4>
 <p>运用广义欧几里德除法求整数 <span class="math inline">\(s, t\)</span>
@@ -347,11 +360,72 @@ b)\)</span>.</p>
 <p>① <span class="math inline">\((1613, 3589).\qquad\)</span> ② <span
 class="math inline">\((2947, 3772).\)</span></p>
 <h4 id="answer-4">Answer</h4>
+<p><strong>解：</strong></p>
+<p>①</p>
+<p><span class="math display">\[
+\begin{aligned}
+3589 &amp;= 2 \times 1613 + 363 \\
+1613 &amp;= 4 \times 363 + 161 \\
+363 &amp;= 2 \times 161 + 41 \\
+161 &amp;= 3 \times 41 + 38 \\
+41 &amp;= 1 \times 38 + 3 \\
+38 &amp;= 12 \times 3 + 2 \\
+3 &amp;= 1 \times 2 + 1 \\
+2 &amp;= 2 \times 1 \\ \ \\
+(1613, 3589) = 1 &amp;= 3 - 2 \\
+&amp;= 3 + 12 \times 3 - 38 \\
+&amp;= 13 \times (41 - 38) - 38 \\
+&amp;= 13 \times 41 - 14 \times (161 - 3 \times 41) \\
+&amp;= 55 \times (363 - 2 \times 161) - 14 \times 161 \\
+&amp;= 55 \times 363 - 124 \times (1613 - 4 \times 363) \\
+&amp;= 551 \times (3589 - 2 \times 1613) - 124 \times 1613 \\
+&amp;= 551 \times 3589 - 1226 \times 1613 \\
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ (1613, 3589) = 1 = (- 1226)
+\times 1613 + 551 \times 3589\)</span></p>
+<p>②</p>
+<p><span class="math display">\[
+\begin{aligned}
+3772 &amp;= 1 \times 2947 + 825 \\
+2947 &amp;= 3 \times 825 + 472 \\
+825 &amp;= 1 \times 472 + 353 \\
+472 &amp;= 1 \times 353 + 119 \\
+353 &amp;= 2 \times 119 + 115 \\
+119 &amp;= 1 \times 115 + 4 \\
+115 &amp;= 28 \times 4 + 3 \\
+4 &amp;= 1 \times 3 + 1 \\
+3 &amp;= 3 \times 1 \\ \ \\
+(2947, 3772) = 1 &amp;= 4 - 3 \\
+&amp;= 4 + 28 \times 4 - 115 \\
+&amp;= 29 \times (119 - 115) - 115 \\
+&amp;= 29 \times 119 - 30 \times (353 - 2 \times 119) \\
+&amp;= 89 \times (472 - 353) - 30 \times 353 \\
+&amp;= 89 \times 472 - 119 \times (825 - 472) \\
+&amp;= 208 \times (2947 - 3 \times 825) - 119 \times 825 \\
+&amp;= 208 \times 2947 - 743 \times (3772 - 2947) \\
+&amp;= 951 \times 2947 - 743 \times 3772 \\
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ (2947, 3772) = 1 = 951 \times
+2947 - 743 \times 3772\)</span></p>
 <h3 id="section-5">(50)</h3>
 <h4 id="question-5">Question</h4>
 <p>求出下列各对数的最小公倍数.</p>
 <p>④ <span class="math inline">\([132, 253]\)</span>.</p>
 <h4 id="answer-5">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+253 &amp;= 1 \times 132 + 121 \\
+132 &amp;= 1 \times 121 + 11 \\
+121 &amp;= 11 \times 11
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ (132, 253) = 11\)</span>.</p>
+<p><span class="math inline">\(\therefore\ [132, 253] = \frac{132 \times
+253}{(132, 253)} = \frac{11 \times 12 \times 11 \times 23}{11} = 11
+\times 12 \times 23 = 29436\)</span>.</p>
 <h2 id="第2章-同余">第2章 同余</h2>
 <h3 id="section-6">(2)</h3>
 <h4 id="question-6">Question</h4>
@@ -359,6 +433,14 @@ class="math inline">\((2947, 3772).\)</span></p>
 class="math inline">\(0^2, 1^2, \cdots, (m-1)^2\)</span> 一定不是模
 <span class="math inline">\(m\)</span> 的完全剩余系.</p>
 <h4 id="answer-6">Answer</h4>
+<p><strong>证明：</strong></p>
+<p><span class="math inline">\(\because\ m &gt; 2, (m - 1)^2 = m^2 - 2m
++ 1 = m(m - 2) + 1 \equiv 1 \pmod{m}\)</span></p>
+<p>则 <span class="math inline">\(1\)</span> 和任意 <span
+class="math inline">\((m - 1)^2\)</span> 在同一剩余类中，则 <span
+class="math inline">\(m &gt; 2\)</span> 时，</p>
+<p><span class="math inline">\(0^2, 0^1, \cdots, (m - 1)^2\)</span>
+一定不是模 <span class="math inline">\(m\)</span> 的完全剩余类.</p>
 <h3 id="section-7">(6)</h3>
 <h4 id="question-7">Question</h4>
 <p><span class="math inline">\(2003\)</span> 年 <span
@@ -367,6 +449,13 @@ class="math inline">\(9\)</span> 日是星期五，问第 <span
 class="math inline">\(2^{20080509}\)</span> 天是星期几 <span
 class="math inline">\(?\)</span></p>
 <h4 id="answer-7">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math inline">\(2^1 \equiv 2 \pmod{7},\qquad 2^2 \equiv 4
+\pmod{7}, \qquad 2^3 \equiv 1 \pmod{7}\)</span></p>
+<p><span class="math inline">\(20080509 = 3 \times 6693503\)</span></p>
+<p><span class="math inline">\(\therefore\ 2^{20080509} =
+(2^3)^{6693503} \equiv 1 \pmod{7}\)</span></p>
+<p><span class="math inline">\(\therefore\)</span> 是星期六.</p>
 <h3 id="section-8">(9)</h3>
 <h4 id="question-8">Question</h4>
 <p>设 <span class="math inline">\(n = pq\)</span>，其中 <span
@@ -375,11 +464,208 @@ class="math inline">\(a^2 \equiv b^2 \pmod{n},\ n \nmid a - b,\ n \nmid
 a + b\)</span>，则 <span class="math inline">\((n, a - b) \gt 1, (n, a +
 b) \gt 1\)</span>.</p>
 <h4 id="answer-8">Answer</h4>
+<p><strong>证明：</strong></p>
+<p><span class="math inline">\(\because\ a^2 \equiv b^2
+\pmod{n}\)</span></p>
+<p><span class="math inline">\(\therefore\)</span> 设 <span
+class="math inline">\(a^2 - b^2 = kn = (a + b)(a - b), k \in
+\mathbf{Z}\)</span></p>
+<p><span class="math inline">\(\Rightarrow\ n \mid (a + b)(a - b), kpq =
+(a + b)(a - b)\)</span></p>
+<p><span class="math inline">\(\because\ n \nmid (a - b), n \nmid (a +
+b)\)</span></p>
+<p>则如设 <span class="math inline">\(p \mid a - b, q \mid a +
+b\)</span>，则 <span class="math inline">\(p \nmid a + b, q \nmid a -
+b\)</span>.</p>
+<p><span class="math inline">\(\therefore\ (p, a + b) = 1 = (q, a -
+b)\)</span></p>
+<p><span class="math inline">\(\therefore\\ (n, a - b) = (pq, a - b) =
+(p, a - b) = p &gt; 1 \\ (n, a + b) = (pq, a + b) = (q, a + b) = q &gt;
+1\)</span></p>
 <h3 id="section-9">(12)</h3>
 <h4 id="question-9">Question</h4>
 <p>列出 <span class="math inline">\(\mathbf{Z} / 7\mathbf{Z}\)</span>
 中的加法表和乘法表.</p>
 <h4 id="answer-9">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math inline">\(\mathbf{Z} / 7\mathbf{Z} = \{0, 1, 2, 3,
+4, 5, 6\}\)</span>.</p>
+<p><strong>加法表</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span
+class="math inline">\(\oplus\)</span></th>
+<th style="text-align: left;">0</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>0</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>1</strong></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>3</strong></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>4</strong></td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>5</strong></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>6</strong></td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>乘法表</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span
+class="math inline">\(\otimes\)</span></th>
+<th style="text-align: left;">0</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>0</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>1</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>3</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>4</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>5</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>6</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
 <h3 id="section-10">(31)</h3>
 <h4 id="question-10">Question</h4>
 <p>证明：如果 <span class="math inline">\(c_1, c_2, \cdots,
@@ -389,12 +675,34 @@ c_{\varphi(m)}\)</span> 是模 <span class="math inline">\(m\)</span>
 c_1 + c_2 + \cdots + c_{\varphi(m)} \equiv 0 \pmod{m}.
 \]</span></p>
 <h4 id="answer-10">Answer</h4>
+<p><strong>证明：</strong></p>
+<p><span class="math inline">\(\because\ C_1, C_2, \cdots,
+C_{\varphi(m)}\)</span> 是模 <span class="math inline">\(m\)</span>
+的简化剩余系.</p>
+<p>而对任意 <span class="math inline">\(C_i\)</span> 有 <span
+class="math inline">\((m - C_i) + C_i \equiv 0 \pmod{m}\)</span>.</p>
+<p>而 <span class="math inline">\(m - C_i\)</span> 属于模 <span
+class="math inline">\(m\)</span> 的简化剩余系.</p>
+<p><span class="math inline">\(\therefore\ c_1 + c_2 + \cdots +
+c_{\varphi(m)} \equiv 0 \pmod{m}\)</span>.</p>
 <h2 id="第3章-同余式">第3章 同余式</h2>
 <h3 id="section-11">(1)</h3>
 <h4 id="question-11">Question</h4>
 <p>求出下列一次同余方程的所有解.</p>
 <p>③ <span class="math inline">\(17x \equiv 14 \pmod{21}\)</span>.</p>
 <h4 id="answer-11">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math inline">\(\because\ (17, 21) = 1 \mid
+14\)</span></p>
+<p><span class="math inline">\(\therefore\)</span> 有解.</p>
+<p>求出 <span class="math inline">\(7x \equiv 1 \pmod{21}\)</span>
+的一个特解 <span class="math inline">\(x_0&#39; \equiv 5
+\pmod{21}\)</span>.</p>
+<p>则 <span class="math inline">\(17x \equiv 14 \pmod{21}\)</span>
+的一个特解 <span class="math inline">\(x_0 \equiv 14x_0&#39; \equiv 14
+\cdot 5 \equiv 7 \pmod{21}\)</span>.</p>
+<p>所有解为 <span class="math inline">\(x \equiv 7
+\pmod{21}\)</span>.</p>
 <h3 id="section-12">(10)</h3>
 <h4 id="question-12">Question</h4>
 <p>证明：同余方程组 <span class="math inline">\(\begin{cases} x \equiv
@@ -403,12 +711,51 @@ a_1 \pmod{m_1} \\ x \equiv a_2 \pmod{m_2} \end{cases}\)</span></p>
 a_2)\)</span>. 并证明若有解，该解模 <span class="math inline">\(([m_1,
 m_2])\)</span> 是唯一的.</p>
 <h4 id="answer-12">Answer</h4>
+<p><strong>证明：</strong></p>
+<p>必要性：</p>
+<p>有解 <span class="math inline">\(\Rightarrow\ (m_1, m_2) = 1 \mid
+(a_1 - a-2)\)</span>，显然成立.</p>
+<p>充分性：</p>
+<p><span class="math inline">\(x \equiv y_1 m_1 + a_1 \Rightarrow y_1
+m_1 \equiv a_2 - a_1 \pmod{m_2}\)</span>.</p>
+<p>有解 <span class="math inline">\(y_1 \equiv y_0
+\pmod{m_2}\)</span>.</p>
+<p>设 <span class="math inline">\(x_0 = a_1 + m_1 y_0\)</span>，则 <span
+class="math inline">\(x_0 \equiv a_1 \pmod{m_1}\)</span>，且</p>
+<p><span class="math inline">\(x_0 = a_1 + m_1 y_0 \equiv a_2
+\pmod{m_2}\)</span></p>
+<p><span class="math inline">\(\therefore\ x_0\)</span>
+为同余方程组的解.</p>
+<p>若 <span class="math inline">\(x_1, x_2\)</span> 为方程组的解，则
+<span class="math inline">\(x_1 \equiv x_2 \pmod{m_1}, x_1 \equiv x_2
+\pmod{m_2}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ x_1 \equiv x_2 \pmod{[m_1,
+m_2]}\)</span>，解模 <span class="math inline">\(([m_1, m_2])\)</span>
+是唯一的.</p>
 <h3 id="section-13">(16)</h3>
 <h4 id="question-13">Question</h4>
 <p>求下列一次同余方程组的解.</p>
 <p>① <span class="math inline">\(\begin{cases} x + 2y \equiv 1 \pmod{7}
 \\ 2x + y \equiv 1 \pmod{7} \end{cases}\)</span>.</p>
 <h4 id="answer-13">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math display">\[
+\begin{cases}
+x + 2y \equiv 1 \pmod{7} \\
+2x + y \equiv 1 \pmod{7}
+\end{cases} \Rightarrow
+\begin{cases}
+x + y \equiv 3 \pmod{7} \\
+x - y \equiv 0 \pmod{7}
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+\therefore
+\begin{cases}
+x \equiv 5 \pmod{7} \\
+y \equiv 5 \pmod{7}
+\end{cases}
+\]</span></p>
 <h3 id="section-14">(19)</h3>
 <h4 id="question-14">Question</h4>
 <p>将同余式方程化为同余式组来求解.</p>
@@ -416,6 +763,77 @@ m_2])\)</span> 是唯一的.</p>
 \pmod{140};\qquad (\mathrm{ii})\ 17x \equiv 229
 \pmod{1540}\)</span>.</p>
 <h4 id="answer-14">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math inline">\((\mathrm{i})\)</span></p>
+<p><span class="math display">\[
+23x \equiv 1 \pmod{140} \Rightarrow
+\begin{cases}
+23x \equiv 1 \pmod{4} \\
+23x \equiv 1 \pmod{5} \\
+23x \equiv 1 \pmod{7}
+\end{cases} \Rightarrow
+\begin{cases}
+x \equiv 3 \pmod{4} \\
+x \equiv 2 \pmod{5} \\
+x \equiv 4 \pmod{7}
+\end{cases}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ m_1 = 4, m_2 = 5, m_3 =
+7\)</span>.</p>
+<p><span class="math inline">\(\therefore\ M_1 = 35, M_2 = 28, M_3 =
+20\)</span>.</p>
+<p><span class="math display">\[
+\begin{cases}
+35M_1&#39; \equiv 1 \pmod{4} \\
+28M_2&#39; \equiv 1 \pmod{5} \\
+20M_3&#39; \equiv 1 \pmod{7}
+\end{cases} \Rightarrow
+\begin{cases}
+M_1&#39; = 3 \\
+M_2&#39; = 2 \\
+M_3&#39; = 6
+\end{cases}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ x \equiv 3 \cdot 3 \cdot 25 +
+2 \cdot 2 \cdot 28 + 4 \cdot 6 \cdot 20 \pmod{140} \Rightarrow x \equiv
+67 \pmod{140}\)</span>.</p>
+<p><span class="math inline">\((\mathrm{ii})\)</span></p>
+<p><span class="math display">\[
+17x \equiv 229 \pmod{1540} \Rightarrow
+\begin{cases}
+17x \equiv 1 \pmod{4} \\
+17x \equiv 4 \pmod{5} \\
+17x \equiv 5 \pmod{7} \\
+17x \equiv 9 \pmod{11}
+\end{cases} \Rightarrow
+\begin{cases}
+x \equiv 1 \pmod{4} \\
+x \equiv 2 \pmod{5} \\
+x \equiv 4 \pmod{7} \\
+x \equiv 7 \pmod{11}
+\end{cases}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ m_1 = 4, m_2 = 5, m_3 = 7,
+m_4 = 11\)</span>.</p>
+<p><span class="math inline">\(\therefore\ M_1 = 385, M_2 = 308, M_3 =
+220, M_4 = 140\)</span>.</p>
+<p><span class="math display">\[
+\begin{cases}
+385M_1&#39; \equiv 1 \pmod{4} \\
+308M_2&#39; \equiv 1 \pmod{5} \\
+220M_3&#39; \equiv 1 \pmod{7} \\
+140M_4&#39; \equiv 1 \pmod{11}
+\end{cases} \Rightarrow
+\begin{cases}
+M_1&#39; = 1 \\
+M_2&#39; = 2 \\
+M_3&#39; = 5 \\
+M_4&#39; = 7
+\end{cases}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ x \equiv 1 \cdot 1 \cdot 385
++ 2 \cdot 2 \cdot 308 + 5 \cdot 4 \cdot 220 + 7 \cdot 7 \cdot 140
+\pmod{1540} \Rightarrow x \equiv 557 \pmod{1540}\)</span>.</p>
 <h3 id="section-15">(23)</h3>
 <h4 id="question-15">Question</h4>
 <p>求解同余式</p>
@@ -424,6 +842,19 @@ m_2])\)</span> 是唯一的.</p>
 \pmod{7}.
 \]</span></p>
 <h4 id="answer-15">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+3x^{14} + 4x^{13} + 2x^{11} + x^9 + x^6 + x^3 + 12x^2 + x &amp;\equiv 0
+\pmod{7} \\
+(x^7 - x)(3x^7 + 4x^6 + 2x^4 + x^2 + 3x + 4) + x^6 + 2x^5 + 2x^3 + 15x^2
++ 5x &amp;\equiv 0 \pmod{7} \\
+x^6 + 2x^5 + 2x^3 + 15x^2 + 5x &amp;\equiv 0 \pmod{7}
+\end{aligned}
+\]</span></p>
+<p>代入 <span class="math inline">\(x = 0, 1, 2, 3, 4, 5, 6\)</span></p>
+<p>得 <span class="math inline">\(x \equiv 0 \pmod{7} \Rightarrow x
+\equiv 6 \pmod{7}\)</span>.</p>
 <h3 id="section-16">(24)</h3>
 <h4 id="question-16">Question</h4>
 <p>求解同余式</p>
@@ -431,17 +862,124 @@ m_2])\)</span> 是唯一的.</p>
 f(x) \equiv x^4 + 7x + 4 \equiv 0 \pmod{243}.
 \]</span></p>
 <h4 id="answer-16">Answer</h4>
+<p><strong>解：</strong></p>
+<p>求导 <span class="math inline">\(f&#39;(x) = 4x^3 + 7
+\pmod{243}\)</span>.</p>
+<p>且 <span class="math inline">\(243 = 3^5\)</span>.</p>
+<p><span class="math inline">\(\therefore\ f(x) \equiv 0 \pmod{3}
+\Rightarrow x_1 \equiv 1 \pmod{3}\)</span>.</p>
+<p>将 <span class="math inline">\(x = 1 + 3 \cdot t_1\)</span> 代入
+<span class="math inline">\(f(x) \equiv 0 \pmod{9}\)</span>.</p>
+<p><span class="math inline">\(f(1) + f&#39;(1)t_1 \cdot 3 \equiv 0
+\pmod{9} \Rightarrow f(1) \equiv 3 \pmod{9}, f&#39;(1) \equiv 2
+\pmod{9}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ 3 + 6t_1 \equiv 0
+\pmod{9}\)</span> 或 <span class="math inline">\(2t_1 \equiv -1
+\pmod{3}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ t_1 \equiv 1
+\pmod{3}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ f(x) \equiv 0 \pmod{9}
+\Rightarrow x_2 \equiv 1 + 3 \cdot t_1 \equiv 4 \pmod{9}\)</span>.</p>
+<p>将 <span class="math inline">\(x = 4 + 9 \cdot t_2\)</span> 代入
+<span class="math inline">\(f(x) \equiv 0 \pmod{27}\)</span>.</p>
+<p><span class="math inline">\(f(4) \equiv 18 \pmod{27}, f&#39;(4)
+\equiv 20 \pmod{27}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ 18 + 20t_2 \cdot 9 \equiv 0
+\pmod{27} \Rightarrow 2t_2 \equiv -2 \pmod{3}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ t_2 \equiv 2
+\pmod{3}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ x_3 \equiv 4 + 9 \cdot t_2
+\equiv 22 \pmod{27}\)</span>.</p>
+<p>将 <span class="math inline">\(x = 22 + 27 \cdot t_3\)</span> 代入
+<span class="math inline">\(f(x) \equiv 0 \pmod{81}\)</span>.</p>
+<p><span class="math inline">\(f(22) \equiv 0 \pmod{81}, f&#39;(22)
+\equiv 7 \pmod{81}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ 0 + 7t_3 \cdot 1 \equiv 0
+\pmod{3}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ t_3 \equiv 0
+\pmod{3}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ x_4 \equiv x_3 + 27 \cdot t_3
+\equiv 22 \pmod{81}\)</span>.</p>
+<p><span class="math inline">\(f(22) \equiv 162 \pmod{243}, f&#39;(22)
+\equiv 6 \pmod{243}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ 162 + 27t_4 \cdot 6 \equiv 0
+\pmod{243}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ t_4 \equiv 2
+\pmod{3}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ x_5 \equiv x_4 + 81 \cdot t_4
+\equiv 184 \pmod{243}\)</span>.</p>
+<p><span class="math inline">\(\therefore\)</span> 解为 <span
+class="math inline">\(x \equiv 84 \pmod{243}\)</span>.</p>
 <h2 id="第4章-二次同余式与平方剩余">第4章 二次同余式与平方剩余</h2>
 <h3 id="section-17">(4)</h3>
 <h4 id="question-17">Question</h4>
 <p>求满足方程 <span class="math inline">\(E: y^2 = x^3 - 2x + 3
 \pmod{7}\)</span> 的所有点.</p>
 <h4 id="answer-17">Answer</h4>
+<p><strong>解：</strong></p>
+<p>对 <span class="math inline">\(x = 0, 1, 2, 3, 4, 5, 6\)</span>
+分别求 <span class="math inline">\(y\)</span>.</p>
+<p><span class="math inline">\(x = 0, y^2 \equiv 3
+\pmod{7}\)</span>，无解.</p>
+<p><span class="math inline">\(x = 1, y^2 \equiv 2
+\pmod{7}\)</span>，<span class="math inline">\(y = 3, 4
+\pmod{7}\)</span>.</p>
+<p><span class="math inline">\(x = 2, y^2 \equiv 0
+\pmod{7}\)</span>，<span class="math inline">\(y = 0
+\pmod{7}\)</span>.</p>
+<p><span class="math inline">\(x = 3, y^2 \equiv 3
+\pmod{7}\)</span>，无解.</p>
+<p><span class="math inline">\(x = 4, y^2 \equiv 3
+\pmod{7}\)</span>，无解.</p>
+<p><span class="math inline">\(x = 5, y^2 \equiv 6
+\pmod{7}\)</span>，无解.</p>
+<p><span class="math inline">\(x = 6, y^2 \equiv 4
+\pmod{7}\)</span>，<span class="math inline">\(y = 2, 5
+\pmod{7}\)</span>.</p>
+<p><span class="math inline">\(\therefore\)</span> 共 <span
+class="math inline">\(5\)</span> 个点.</p>
 <h3 id="section-18">(10)</h3>
 <h4 id="question-18">Question</h4>
 <p>求解同余式 <span class="math inline">\(x^2 \equiv 79
 \pmod{105}\)</span>.</p>
 <h4 id="answer-18">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math inline">\(\because\ 105 = 3 \cdot 5 \cdot
+7\)</span></p>
+<p><span class="math inline">\(\therefore\)</span>
+原同余式等价于同余式组</p>
+<p><span class="math display">\[
+\begin{cases}
+x^2 \equiv 79 \equiv 1 \pmod{3} \\
+x^2 \equiv 79 \equiv 4 \pmod{5} \\
+x^2 \equiv 79 \equiv 2 \pmod{7}
+\end{cases} \Rightarrow
+\begin{cases}
+x = x_1 \equiv \pm 1 \pmod{3} \\
+x = x_2 \equiv \pm 2 \pmod{5} \\
+x = x_3 \equiv \pm 3 \pmod{7}
+\end{cases}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ m_1 = 3, m_2 = 5, m_3 = 7, m
+= 105\)</span>.</p>
+<p><span class="math inline">\(\therefore\ M_1 = 35, M_2 = 21, M_3 =
+15\)</span>.</p>
+<p><span class="math inline">\(\therefore\ M_1&#39; = 2, M_2&#39; = 1,
+M_3&#39; = 1\)</span>.</p>
+<p><span class="math inline">\(\therefore\ x \equiv 70b_1 + 21b_2 +
+15b_3 \pmod{105} \Rightarrow\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+x &amp;\equiv&amp;  70 + 42 + 45 &amp;\equiv 52 \pmod{105} \\
+x &amp;\equiv&amp;  70 + 42 - 45 &amp;\equiv 67 \pmod{105} \\
+x &amp;\equiv&amp;  70 - 42 + 45 &amp;\equiv 73 \pmod{105} \\
+x &amp;\equiv&amp;  70 - 42 - 45 &amp;\equiv 88 \pmod{105} \\
+x &amp;\equiv&amp; -70 + 42 + 45 &amp;\equiv 17 \pmod{105} \\
+x &amp;\equiv&amp; -70 + 42 - 45 &amp;\equiv 32 \pmod{105} \\
+x &amp;\equiv&amp; -70 - 42 + 45 &amp;\equiv 38 \pmod{105} \\
+x &amp;\equiv&amp; -70 - 42 - 45 &amp;\equiv 53 \pmod{105}
+\end{aligned}
+\]</span></p>
 <h3 id="section-19">(20)</h3>
 <h4 id="question-19">Question</h4>
 <p>② <span
@@ -449,16 +987,125 @@ class="math inline">\(\bigg(\frac{151}{373}\bigg);\quad\)</span> ④ <span
 class="math inline">\(\bigg(\frac{151}{373}\bigg);\quad\)</span> ⑤ <span
 class="math inline">\(\bigg(\frac{151}{373}\bigg);\)</span></p>
 <h4 id="answer-19">Answer</h4>
+<p><strong>解：</strong></p>
+<p>②</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\bigg(\frac{151}{373}\bigg) \\ \ \\
+&amp;= \bigg(\frac{373}{151}\bigg) \cdot (-1)^{\frac{151 - 1}{2} \cdot
+\frac{373 - 1}{2}} \\ \ \\
+&amp;= \bigg(\frac{71}{151}\bigg) \\ \ \\
+&amp;= \bigg(\frac{151}{71}\bigg) \cdot (-1)^{\frac{151 - 1}{2} \cdot
+\frac{373 - 1}{2}} \\ \ \\
+&amp;= -\bigg(\frac{9}{71}\bigg) \\ \ \\
+&amp;= -\bigg(\frac{3^2}{71}\bigg) \\ \ \\
+&amp;= -1 \\ \ \\
+\end{aligned}
+\]</span></p>
+<p>④</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\bigg(\frac{911}{2003}\bigg) \\ \ \\
+&amp;= \bigg(\frac{2003}{911}\bigg) \cdot (-1)^{\frac{911 - 1}{2} \cdot
+\frac{2003 - 1}{2}} \\ \ \\
+&amp;= -\bigg(\frac{181}{911}\bigg) \\ \ \\
+&amp;= -\bigg(\frac{911}{181}\bigg) \cdot (-1)^{\frac{181 - 1}{2} \cdot
+\frac{911 - 1}{2}} \\  \ \\
+&amp;= -\bigg(\frac{6}{181}\bigg) \\
+&amp;= -\bigg(\frac{2}{181}\bigg) \cdot \bigg(\frac{3}{181}\bigg) \\ \
+\\
+&amp;= -(-1)^{\frac{181^2 - 1}{8}} \cdot \bigg(\frac{181}{3}\bigg) \cdot
+(-1)^{\frac{181 - 1}{2} \cdot \frac{3 - 1}{2}} \\ \ \\
+&amp;= \bigg(\frac{1}{3}\bigg) \\ \ \\
+&amp;= 1 \\ \ \\
+\end{aligned}
+\]</span></p>
+<p>⑤</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\bigg(\frac{37}{200723}\bigg) \\ \ \\
+&amp;= \bigg(\frac{200723}{37}\bigg) \cdot (-1)^{\frac{37 - 1}{2} \cdot
+\frac{200723 - 1}{2}} \\ \ \\
+&amp;= \bigg(\frac{35}{37}\bigg) \\ \ \\
+&amp;= \bigg(\frac{5}{37}\bigg) \cdot \bigg(\frac{7}{37}\bigg) \\ \ \\
+&amp;= \bigg(\frac{37}{5}\bigg) \cdot (-1)^{\frac{5 - 1}{2} \cdot
+\frac{37 - 1}{2}} \cdot \bigg(\frac{37}{7}\bigg) \cdot (-1)^{\frac{7 -
+1}{2} \cdot \frac{37 - 1}{2}} \\ \ \\
+&amp;= \bigg(\frac{2}{5}\bigg) \cdot \bigg(\frac{2}{7}\bigg) \\ \ \\
+&amp;= (-1)^{\frac{5^2 - 1}{8}} \cdot (-1)^{\frac{7^2 - 1}{8}} \\ \ \\
+&amp;= -1 \\ \ \\
+\end{aligned}
+\]</span></p>
 <h3 id="section-20">(22)</h3>
 <h4 id="question-20">Question</h4>
+<p>求下列同余方程的解数：</p>
 <p>① <span class="math inline">\(x^2 \equiv -2 \pmod{67};\qquad\)</span>
 ② <span class="math inline">\(x^2 \equiv 2 \pmod{67};\)</span></p>
 <h4 id="answer-20">Answer</h4>
+<p><strong>解：</strong></p>
+<p>①</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\bigg(\frac{-2}{67}\bigg) \\ \ \\
+&amp;= \bigg(\frac{-1}{67}\bigg) \cdot \bigg(\frac{2}{67}\bigg) \\ \ \\
+&amp;= (-1)^{\frac{67 - 1}{2}} \cdot (-1)^{\frac{67^2 - 1}{8}} \\
+&amp;= 1 \\ \ \\
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\therefore\)</span> 有两个解.</p>
+<p>②</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\bigg(\frac{2}{67}\bigg) \\
+&amp;= (-1)^{\frac{67^2 - 1}{8}} \\
+&amp;= -1 \\ \ \\
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\therefore\)</span> 无解.</p>
 <h3 id="section-21">(26)</h3>
 <h4 id="question-21">Question</h4>
+<p>判断下列同余方程是否有解：</p>
 <p>① <span class="math inline">\(x^2 \equiv 7 \pmod{227};\qquad\)</span>
 ③ <span class="math inline">\(11x^2 \equiv -6 \pmod{91};\)</span></p>
 <h4 id="answer-21">Answer</h4>
+<p><strong>解：</strong></p>
+<p>①</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\bigg(\frac{7}{227}\bigg) \\ \ \\
+&amp;= \bigg(\frac{227}{7}\bigg) \cdot (-1)^{\frac{227 - 1}{2} \cdot
+\frac{7 - 1}{2}} \\
+&amp;= -\bigg(\frac{3}{7}\bigg) \\ \ \\
+&amp;= -\bigg(\frac{7}{3}\bigg) \cdot (-1)^{\frac{3 - 1}{2} \cdot
+\frac{7 - 1}{2}} \\ \ \\
+&amp;= \bigg(\frac{1}{3}\bigg)\\ \ \\
+&amp;= 1 \\ \ \\
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\therefore\ 7\)</span> 是 <span
+class="math inline">\(227\)</span> 的平方剩余，有解.</p>
+<p>③</p>
+<p><span class="math display">\[
+11x^2 \equiv -6 \pmod{91} \Rightarrow x^2 \equiv 16 \pmod{91} \\
+\Rightarrow
+\begin{cases}
+x^2 \equiv 3 \pmod{13} \\
+x^2 \equiv 2 \pmod{7}
+\end{cases} \Rightarrow
+\begin{cases}
+x = x_1 \equiv \pm 4 \pmod{13} \\
+x = x_2 \equiv \pm 3 \pmod{7}
+\end{cases} \\
+\]</span></p>
+<p><span class="math inline">\(\therefore\ m_1 = 13, m_2 =
+7\)</span>.</p>
+<p><span class="math inline">\(\therefore\ M_1 = 7, M_2 =
+13\)</span>.</p>
+<p><span class="math inline">\(\therefore\ M_1&#39; = 2, M_2&#39; =
+5\)</span>.</p>
+<p><span class="math inline">\(\therefore\ x \equiv 14b_1 + 65b_2
+\pmod{91}\)</span></p>
+<p><span class="math inline">\(\therefore\)</span> 有解.</p>
 <h3 id="section-22">(39)</h3>
 <h4 id="question-22">Question</h4>
 <p>设 <span class="math inline">\(p = 401, q =
@@ -466,12 +1113,75 @@ class="math inline">\(\bigg(\frac{151}{373}\bigg);\)</span></p>
 <p><span class="math inline">\((\mathrm{v})\ x^2 = 11
 \pmod{pq}\)</span>.</p>
 <h4 id="answer-22">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math inline">\(x^2 = 11 \pmod{pq}, p = 401, q =
+281\)</span></p>
+<p><span class="math inline">\(\Rightarrow \begin{cases} x^2 \equiv 11
+\pmod{401} \\ x^2 \equiv 11 \pmod{281} \end{cases}\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\bigg(\frac{11}{281}\bigg) \\ \ \\
+&amp;= \bigg(\frac{281}{11}\bigg) \cdot (-1)^{\frac{281 - 1}{2} \cdot
+\frac{11 - 1}{2}} \\ \ \\
+&amp;= \bigg(\frac{6}{11}\bigg) \\ \ \\
+&amp;= \bigg(\frac{2}{11}\bigg) \bigg(\frac{3}{11}\bigg) \\ \ \\
+&amp;= (-1)^{\frac{11^2 - 1}{8}} \cdot \bigg(\frac{11}{3}\bigg) \cdot
+(-1)^{\frac{11 - 1}{2} \cdot \frac{3 - 1}{2}} \\
+&amp;= (-1)^{\frac{3^2 - 1}{8}} \\ \ \\
+&amp;= -1 \\ \ \\
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\therefore\)</span> 无解.</p>
 <h2 id="第5章-原根与指标">第5章 原根与指标</h2>
 <h3 id="section-23">(5)</h3>
 <h4 id="question-23">Question</h4>
 <p>问模 <span class="math inline">\(47\)</span> 的原根有多少个？求出模
 <span class="math inline">\(47\)</span> 的所有原根.</p>
 <h4 id="answer-23">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math inline">\(\because\ 47\)</span> 为素数.</p>
+<p><span class="math inline">\(\therefore\ \varphi(47) = 46 = 2 \times
+43 \Rightarrow q_1 = 2, q_2 = 43\)</span>.</p>
+<p>原根个数 <span class="math inline">\(n = \varphi(\varphi(m)) =
+\varphi(46) = \varphi(2) \cdot \varphi(23) = 22\)</span>.</p>
+<p>只需验证 <span class="math inline">\(g^{23} \equiv 1 \pmod{47}, g^{2}
+\equiv 1 \pmod{47}\)</span> 是否成立.</p>
+<p>对 <span class="math inline">\(2, 3, 5\)</span> 等进行验算.</p>
+<p><span class="math inline">\(2^2 \equiv 4, 2^3 \equiv 8, 2^4 \equiv
+16,\)</span><br />
+<span class="math inline">\(2^7 \equiv 34, 2^8 \equiv 21, 2^{16} \equiv
+1 \pmod{47}\)</span>.</p>
+<p><span class="math inline">\(3^2 \equiv 9, 3^3 \equiv 27, 3^4 \equiv
+81,\)</span><br />
+<span class="math inline">\(3^7 \equiv 25, 3^8 \equiv 28, 3^{16} \equiv
+32, 3^{23} \equiv 1 \pmod{47}\)</span>.</p>
+<p><span class="math inline">\(5^2 \equiv 4, 5^3 \equiv 31, 5^4 \equiv
+14,\)</span><br />
+<span class="math inline">\(5^7 \equiv 11, 5^8 \equiv 8, 5^{16} \equiv
+17, 5^{23} \equiv -1 \pmod{47}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ g = 5\)</span> 为模 <span
+class="math inline">\(47\)</span> 的原根，<span
+class="math inline">\(g^d\)</span> 遍历 <span
+class="math inline">\(47\)</span> 的所有原根，其中</p>
+<p><span class="math inline">\(d = 1, 3, 5, 7, 9, 11, 13, 15, 17, 19,
+21, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;5^1 = 5, &amp;\quad &amp;5^3 = 31, &amp;\quad &amp;5^5 = 23, \\
+&amp;5^7 = 11, &amp;\quad &amp;5^9 = 40, &amp;\quad &amp;5^{11} = 13, \\
+&amp;5^{13} = 43, &amp;\quad &amp;5^{15} = 41, &amp;\quad &amp;5^{17} =
+38, \\
+&amp;5^{19} = 10, &amp;\quad &amp;5^{21} = 15, &amp;\quad &amp;5^{25} =
+22, \\
+&amp;5^{27} = 33, &amp;\quad &amp;5^{29} = 26, &amp;\quad &amp;5^{31} =
+39, \\
+&amp;5^{33} = 35, &amp;\quad &amp;5^{35} = 29, &amp;\quad &amp;5^{37} =
+20, \\
+&amp;5^{39} = 30, &amp;\quad &amp;5^{41} = 45, &amp;\quad &amp;5^{43} =
+44, \quad &amp;5^{45} = 19 &amp;\pmod{47}\\
+\end{aligned}
+\]</span></p>
+<p>共 <span class="math inline">\(22\)</span> 个.</p>
 <h3 id="section-24">(10)</h3>
 <h4 id="question-24">Question</h4>
 <p>设 <span class="math inline">\(p\)</span> 和 <span
@@ -485,6 +1195,18 @@ a \not \equiv 1,\quad a^2 \not \equiv 1,\quad a^{\frac{p - 1}{2}} \not
 <p>则 <span class="math inline">\(a\)</span> 是模 <span
 class="math inline">\(p\)</span> 的原根.</p>
 <h4 id="answer-24">Answer</h4>
+<p><strong>证明：</strong></p>
+<p><span class="math inline">\(\because\ p, \frac{p - 1}{2}\)</span>
+为素数.</p>
+<p><span class="math inline">\(\therefore\ \varphi(p) = p - 1 = 2 \cdot
+\frac{p - 1}{2}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ q_1 = 2, q_2 = \frac{p -
+1}{2}\)</span>.</p>
+<p>又 <span class="math inline">\(a^{\frac{\varphi(p)}{2}} \not \equiv 1
+\pmod{p}, a^2 = a^{\frac{\varphi(p)}{\frac{p - 1}{2}}} \not \equiv 1
+\pmod{p}\)</span>.</p>
+<p><span class="math inline">\(\therefore\ a\)</span> 为模 <span
+class="math inline">\(p\)</span> 的原根.</p>
 <h3 id="section-25">(17)</h3>
 <h4 id="question-25">Question</h4>
 <p>求解同余式</p>
@@ -492,6 +1214,12 @@ class="math inline">\(p\)</span> 的原根.</p>
 x^{22} \equiv 29 \pmod{41}
 \]</span></p>
 <h4 id="answer-25">Answer</h4>
+<p><strong>解：</strong></p>
+<p><span class="math inline">\(\because\ (n, \varphi(m)) = (22,
+\varphi(41)) = (22, 40) = 2\)</span>,</p>
+<p><span class="math inline">\(\mathrm{ind} 29 = 7, (2, 7) =
+1\)</span>,</p>
+<p><span class="math inline">\(\therefore\)</span> 该同余式无解.</p>
 
     </div>
 
@@ -547,13 +1275,13 @@ x^{22} \equiv 29 \pmod{41}
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">53k</span>
+    <span title="Word count total">67k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:37</span>
+    <span title="Reading time total">2:02</span>
   </span>
 </div>
 <div class="busuanzi-count">
